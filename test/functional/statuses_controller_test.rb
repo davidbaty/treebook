@@ -24,6 +24,11 @@ class StatusesControllerTest < ActionController::TestCase
 
   end
 
+  test "should be logged in to post status" do
+    post :create, status: { content: "Hello" }
+    assert_response: redirectassert_redirected_to new_user_session_path
+  end
+
   test "should create status" do
     assert_difference('Status.count') do
       post :create, status: { content: @status.content }
