@@ -3,3 +3,8 @@ david:
     last_name: "Baty"
     email: "david.baty@ntlworld.com"
     profile_name: "davidbaty"
+jason:
+    first_name: "Jason"
+    last_name: "Siefer"
+    email: "jason@teamtreehouse.com"
+    profile_name: "jasonsiefer"

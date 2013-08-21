@@ -21,10 +21,9 @@ class StatusesControllerTest < ActionController::TestCase
     sign_in users(:david)
     get :new
     assert_response :success
-
   end
 
-  test "should be logged-in to post a status" do
+  test "should be logged in to post a status" do
     post :create, status: { content: "Hello" }
     assert_response :redirect
     assert_redirected_to new_user_session_path
@@ -32,6 +31,7 @@ class StatusesControllerTest < ActionController::TestCase
 
   test "should create status when logged in" do
     sign_in users(:david)
+
     assert_difference('Status.count') do
       post :create, status: { content: @status.content }
     end
